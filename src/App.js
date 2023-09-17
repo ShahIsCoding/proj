@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route index path='/home' element={<Home />} /> 
         <Route  path='/login' element={<Login />} />
+        <Route path='*' element={<Home />} />
       </Routes>
     </AuthProvidor>
   );

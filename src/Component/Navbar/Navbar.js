@@ -27,8 +27,8 @@ export const Navbar = () =>{
 
     return(
         <>
-            <nav className="navbar navbar-expand-lg navbar-light px-2 py-1 border border-bottom row d-flex flex-row justify-content-between">
-                <div className="navbar-brand col-1">
+            <nav className="navbar navbar-expand-lg navbar-light px-2 py-1 border border-bottom  d-flex flex-row justify-content-between">
+                <div className="navbar-brand col-1 text-center">
                     <Link to="/home">
                         <img src="https://w7.pngwing.com/pngs/987/778/png-transparent-travelbird-slither-io-logo-android-travelbird-rectangle-logo-business-thumbnail.png" alt="Travel_Bird" />
                     </Link>
