@@ -1,0 +1,24 @@
+.navbar{
+    height: 80px;
+    cursor: pointer;
+}
+.navbar-brand img{
+    height: 50px;
+    mix-blend-mode: hard-light;
+}
+.profileDashboard{
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    background-color: whitesmoke;
+    opacity: 0.87;
+    border-radius: 10px 5px 10px 10px ;
+    box-shadow: (0, 0, 0, 0.05) 0px 0px 4px, rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+.profileDashboard span{
+    margin: 5px;
+}
+.profileDashboard span:hover{
+    opacity: 1;
+    transform: scale(1.05);
+}

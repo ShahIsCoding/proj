@@ -1,10 +1,11 @@
 import React from 'react';
-import { useAuth } from '../context/authContext';
+import { Navbar } from '../Navbar/Navbar';
+import { HomeBody } from '../HomeBody/HomeBody';
 export const Home = () =>{
-    const auth = useAuth();
     return(
-        <div className=''>
-            {auth.user}
+        <div className='home'>
+            <Navbar />
+            <HomeBody />
         </div>
     );
 }

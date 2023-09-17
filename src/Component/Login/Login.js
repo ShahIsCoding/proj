@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { user_api } from "../../services/api";
 import { useNavigate } from "react-router-dom"
-import { useAuth } from "../context/authContext";
+import { useAuth } from "../../context/authContext";
 
 export const Login = () =>{
     const[username,setUsername] = useState("");
@@ -17,6 +17,7 @@ export const Login = () =>{
     }
     const handleSubmit = (e) =>{
         e.preventDefault();
+        
         let payload = {
             username,
             password
