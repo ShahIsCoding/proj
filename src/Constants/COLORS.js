@@ -1,8 +1,12 @@
 export const BG = {
-  blue: "bg-sky-600",
-  blueLess: "bg-sky-500",
+  bglight: "bg-slate-800",
+  bg: "bg-slate-900",
+  bgdark: "bg-slate-950",
+  hover: "hover:bg-slate-800 hover:cursor-pointer hover:text-orange-600",
 };
 export const TEXT = {
-  blue: "text-sky-600",
-  blueLess: "text-sky-500",
+  colorlight: "text-slate-800",
+  color: "text-slate-900",
+  colordark: "text-slate-950",
+  white: "text-white",
 };

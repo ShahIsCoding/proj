@@ -7,7 +7,7 @@ import ArticleIcon from "@mui/icons-material/Article";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import { Search } from "@mui/icons-material";
-import { BG } from "../../Constants/COLORS";
+import { BG, TEXT } from "../../Constants/COLORS";
 
 export const Navbar = () => {
   const [profileDashboradOpen, setProfileDashboardOpen] = useState(false);
@@ -31,7 +31,7 @@ export const Navbar = () => {
   return (
     <>
       <div
-        className={`grid grid-cols-12 grid-rows-1 p-4 items-center border-b-4 ${BG.blue}`}
+        className={`grid grid-cols-12 grid-rows-1 p-4 items-center w-full border-b-2 sticky top-0 ${BG.bg}`}
       >
         <Link to="/home">
           <img
@@ -40,33 +40,36 @@ export const Navbar = () => {
             className="h-11"
           />
         </Link>
-        <div className={`col-span-5 p-3 rounded-full ${BG.blueLess} mr-1`}>
-          <Search className="" />
+        <div className={`col-span-5 p-3 rounded-full ${BG.bglight} mr-1`}>
+          <Search />
           <input
-            className={`${BG.blueLess}`}
+            className={`${BG.bglight}`}
             value={123}
             placeholder="Search Anything"
           />
         </div>
-        <span
-          className={`col-span-2 col-start-8 ${BG.blueLess} p-3 rounded-full`}
+        <div
+          className={`col-span-2 col-start-8 col-end-10 ${BG.bglight} p-3 px-5 rounded-full flex items-center`}
         >
-          <ArticleIcon /> Write Post
-        </span>
-        <span className="col-span-3 col-start-12 flex justify-around ">
-          <NotificationsIcon className="mx-3" />
-          <PersonIcon onClick={() => setProfileDashboardOpen(true)} />
-        </span>
+          <ArticleIcon /> <span className="ml-2">Write Post</span>
+        </div>
+        <div className={`col-span-3 col-start-12 flex justify-around`}>
+          <NotificationsIcon className={`mx-3 rounded m-2  ${BG.hover}`} />
+          <PersonIcon
+            className={`rounded m-2 ${BG.hover}`}
+            onClick={() => setProfileDashboardOpen(true)}
+          />
+        </div>
       </div>
       {profileDashboradOpen && (
-        <div className={`w-50 ${BG.blue}`} ref={wrapperRef}>
-          <span>
+        <div className={`w-50 ${BG.bglight}`} ref={wrapperRef}>
+          <span className={`hover:bg-slate-800`}>
             <PersonIcon /> My Profile
           </span>
-          <span>
+          <span className={`${BG.hover}`}>
             <BookmarksIcon /> Library
           </span>
-          <span>
+          <span className={`hover:bg-slate-800 cursor-pointer`}>
             <QueryStatsIcon /> Stats
           </span>
           <span>Others</span>
