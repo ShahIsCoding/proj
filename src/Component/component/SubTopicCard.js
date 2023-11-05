@@ -3,10 +3,11 @@ import React from "react";
 import { icons } from "../../assets/css/icons/ICONS";
 import { BG } from "../../Constants/COLORS";
 
-export const SubTopicCard = ({ topic }) => {
+export const SubTopicCard = ({ topic, classNames }) => {
   const [isOpen, setOpen] = useState(false);
   return (
     <div
+      className={classNames}
       onClick={() => {
         setOpen(!isOpen);
       }}
@@ -17,7 +18,7 @@ export const SubTopicCard = ({ topic }) => {
             {icons.gaming}
             <span className="ml-1">{topic}</span>
           </div>
-          <div>{icons.arrowDOWN}</div>
+          <div>{isOpen ? icons.arrowUP : icons.arrowDOWN}</div>
         </div>
       </div>
       <div className={isOpen ? "" : "hidden"}>
