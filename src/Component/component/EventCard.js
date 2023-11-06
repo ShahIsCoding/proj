@@ -1,7 +1,7 @@
 import React from "react";
-import { BG } from "../../Constants/COLORS";
+import { BG } from "../../assets/Constants/COLORS";
 
-const Card = ({ name, description, subredditImg, subreddit }) => {
+const EventCard = ({ name, description, subredditImg, subreddit }) => {
   return (
     <div
       className={`${BG.hover} h-[210px] min-w-fit rounded-[16px] flex flex-col justify-end overflow-hidden m-2`}
@@ -37,4 +37,4 @@ const Card = ({ name, description, subredditImg, subreddit }) => {
   );
 };
 
-export default Card;
+export default EventCard;

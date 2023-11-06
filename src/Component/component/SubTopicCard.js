@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
-import { icons } from "../../assets/css/icons/ICONS";
-import { BG } from "../../Constants/COLORS";
+import { icons } from "../../assets/icons/ICONS";
+import { BG } from "../../assets/Constants/COLORS";
 
 export const SubTopicCard = ({ topic, classNames }) => {
   const [isOpen, setOpen] = useState(false);

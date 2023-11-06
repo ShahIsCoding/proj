@@ -7,7 +7,7 @@ import ArticleIcon from "@mui/icons-material/Article";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import { Search } from "@mui/icons-material";
-import { BG, TEXT } from "../../Constants/COLORS";
+import { BG } from "../../assets/Constants/COLORS";
 
 export const Navbar = () => {
   const [profileDashboradOpen, setProfileDashboardOpen] = useState(false);

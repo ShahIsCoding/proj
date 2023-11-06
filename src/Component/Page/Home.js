@@ -1,9 +1,11 @@
 import React from "react";
-import { BG, TEXT } from "../../Constants/COLORS";
+import { BG, TEXT } from "../../assets/Constants/COLORS";
 import { Navbar } from "../component/Navbar";
-import { icons } from "../../assets/css/icons/ICONS";
-import Card from "../component/Card";
+import { icons } from "../../assets/icons/ICONS";
+import EventCard from "../component/EventCard";
 import { TopicCard } from "../component/TopicCard";
+import { SubRedditCard } from "../component/SubRedditCard";
+import PostCard from "../component/PostCard";
 
 const leftSideBar = () => {
   return (
@@ -23,20 +25,45 @@ const leftSideBar = () => {
     </div>
   );
 };
+
 const centerBar = () => {
   return (
-    <div className="flex">
-      <div className="flex flex-row overflow-x-scroll py-5">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+    <div className="flex flex-col">
+      <div className="flex flex-row overflow-x-scroll py-5 w-full">
+        <EventCard />
+      </div>
+      <div className="grid grid-cols-6 gap-4 border-t-2">
+        <div className="col-span-4 flex flex-col">
+          <div className="grid grid-cols-12 p-2">
+            <div className="col-span-3">
+              <button>Create a Post</button>
+            </div>
+            <div>
+              <div className="rounded"></div>
+            </div>
+          </div>
+          <div>
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+          </div>
+        </div>
+        <div className="col-span-2">
+          <div className={` ${BG.bgdark} p-5 m-2 rounded`}>
+            <div className="mb-3">POPULAR COMMUNITIES</div>
+            <SubRedditCard nameClass="text-sm" number={4135151335} isHover />
+            <SubRedditCard nameClass="text-base" number={4135151335} isHover />
+            <SubRedditCard nameClass="text-lg" number={4135151335} isHover />
+            <SubRedditCard nameClass="text-xs" number={4135151335} isHover />
+            <SubRedditCard nameClass="text-xxs" number={4135151335} isHover />
+            <SubRedditCard nameClass="text-sm" isHover />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -12,3 +12,10 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-xxs {
+  font-size: 0.5rem;
+}
+.btn-primary {
+  background-color: blue;
+}

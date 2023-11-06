@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SubTopicCard } from "./SubTopicCard";
-import { icons } from "../../assets/css/icons/ICONS";
-import { BG } from "../../Constants/COLORS";
+import { icons } from "../../assets/icons/ICONS";
+import { BG } from "../../assets/Constants/COLORS";
 
 export const TopicCard = ({ topic, isLast }) => {
   const [isOpen, setOpen] = useState(true);
