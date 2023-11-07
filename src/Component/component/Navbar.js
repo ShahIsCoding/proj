@@ -55,26 +55,11 @@ export const Navbar = () => {
         </div>
         <div className={`col-span-3 col-start-12 flex justify-around`}>
           <NotificationsIcon className={`mx-3 rounded m-2  ${BG.hover}`} />
-          <PersonIcon
-            className={`rounded m-2 ${BG.hover}`}
-            onClick={() => setProfileDashboardOpen(true)}
-          />
+          <Link to="login">
+            <PersonIcon className={`rounded m-2 ${BG.hover}`} />
+          </Link>
         </div>
       </div>
-      {profileDashboradOpen && (
-        <div className={`w-50 ${BG.bglight}`} ref={wrapperRef}>
-          <span className={`hover:bg-slate-800`}>
-            <PersonIcon /> My Profile
-          </span>
-          <span className={`${BG.hover}`}>
-            <BookmarksIcon /> Library
-          </span>
-          <span className={`hover:bg-slate-800 cursor-pointer`}>
-            <QueryStatsIcon /> Stats
-          </span>
-          <span>Others</span>
-        </div>
-      )}
     </>
   );
 };

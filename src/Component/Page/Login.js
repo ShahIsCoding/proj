@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { user_api } from "../../services/api";
 import { useNavigate } from "react-router-dom";
+import { BG } from "../../assets/Constants/COLORS";
 import { useAuth } from "../../context/authContext";
 
 export const Login = () => {
@@ -10,15 +11,7 @@ export const Login = () => {
   const navigateTo = useNavigate();
   const auth = useAuth();
 
-  async function register(payload) {
-    await user_api
-      .register(payload)
-      .then((resp) => {
-        auth.login(resp.data);
-        navigateTo("/home");
-      })
-      .catch((err) => console.error(err));
-  }
+  async function register(payload) {}
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -29,14 +22,14 @@ export const Login = () => {
     register(payload);
   };
   return (
-    <div className="row text-center h-100 ">
-      <div className="my-auto border rounded py-5 d-flex flex-column align-items-center">
-        <h1 className="mb-5 h1">Login/SignUp</h1>
-        <form onSubmit={handleSubmit} className="w-75">
-          <div className="form-group my-2 ">
+    <div className={`conatiner text-center h-screen ${BG.bg} flex`}>
+      <div className="my-auto mx-auto h-2/3 w-1/3 py-5 flex flex-col">
+        <form onSubmit={handleSubmit} className="p-3 my-auto">
+          <h1 className="mb-5 h1 text-white text-4xl">Login</h1>
+          <div className="my-2 w-full h-1/3">
             <input
               type="text"
-              className="form-control"
+              className="w-full h-full rounded p-3"
               id="login-username"
               aria-describedby="login-username"
               placeholder="Enter Username "
@@ -47,10 +40,10 @@ export const Login = () => {
               Error messages to be shown here
             </small>
           </div>
-          <div className="form-group my-2">
+          <div className="my-2 w-full h-1/3">
             <input
               type={showPassword ? "text" : "password"}
-              className="form-control"
+              className="w-full h-full rounded p-3"
               id="login-password"
               aria-describedby="login-password"
               placeholder="Enter password"
@@ -62,7 +55,7 @@ export const Login = () => {
             </small>
           </div>
           <button type="submit" className="btn btn-primary px-5 py-2 mt-3">
-            Login/SignUp
+            Login
           </button>
         </form>
       </div>

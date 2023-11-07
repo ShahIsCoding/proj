@@ -1,5 +1,5 @@
 export const BG = {
-  bglighter: "bg-slate-700",
+  hoverbglighter: "hover:bg-slate-700",
   bglight: "bg-slate-800",
   bg: "bg-slate-900",
   bgdark: "bg-slate-950",

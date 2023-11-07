@@ -5,7 +5,7 @@ import { BG } from "../../assets/Constants/COLORS";
 const PostCard = ({ isCard = true }) => {
   return (
     <div
-      className={`flex flex-col px-4 py-2 hover:${BG.bglighter} rounded-[25px]`}
+      className={`flex flex-col px-4 py-2 ${BG.hoverbglighter} rounded-[25px]`}
     >
       <div className="grid grid-cols-12 gap-2 w-100 mt-2">
         <div className="col-span-4 ">
