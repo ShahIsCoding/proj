@@ -10,4 +10,5 @@ export const TEXT = {
   color: "text-slate-900",
   colordark: "text-slate-950",
   white: "text-white",
+  orange: "text-orange-600",
 };

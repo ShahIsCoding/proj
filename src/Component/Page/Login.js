@@ -25,7 +25,6 @@ export const Login = () => {
     <div className={`conatiner text-center h-screen ${BG.bg} flex`}>
       <div className="my-auto mx-auto h-2/3 w-1/3 py-5 flex flex-col">
         <form onSubmit={handleSubmit} className="p-3 my-auto">
-          <h1 className="mb-5 h1 text-white text-4xl">Login</h1>
           <div className="my-2 w-full h-1/3">
             <input
               type="text"
@@ -54,7 +53,10 @@ export const Login = () => {
               Error messages to be shown here
             </small>
           </div>
-          <button type="submit" className="btn btn-primary px-5 py-2 mt-3">
+          <button
+            type="submit"
+            className="w-full text-white btn-primary my-2 h-1/3 text-4xl"
+          >
             Login
           </button>
         </form>

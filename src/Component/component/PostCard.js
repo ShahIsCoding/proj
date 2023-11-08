@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { SubRedditCard } from "./SubRedditCard";
 import { icons } from "../../assets/icons/ICONS";
-import { BG } from "../../assets/Constants/COLORS";
+import { BG, TEXT } from "../../assets/Constants/COLORS";
+import { Link } from "react-router-dom";
 const PostCard = ({ isCard = true }) => {
+  const [upVotes, setUpVotes] = useState(undefined);
   return (
     <div
       className={`flex flex-col px-4 py-2 ${BG.hoverbglighter} rounded-[25px]`}
@@ -33,16 +35,38 @@ const PostCard = ({ isCard = true }) => {
           <div
             className={`rounded-full ${BG.bglight} w-fit p-1 cursor-pointer`}
           >
-            <span className="mx-2 hover:text-orange-600">{icons.upVote}</span>
-            {123}
-            <span className="mx-2 hover:text-orange-600">{icons.downVote}</span>
+            <span
+              className={`mx-2 hover:text-orange-600 ${
+                upVotes === true ? TEXT.orange : ""
+              }`}
+              onClick={() => {
+                upVotes === true ? setUpVotes(undefined) : setUpVotes(true);
+              }}
+            >
+              {icons.upVote}
+            </span>
+            {Math.floor(Math.random() * 10000)}
+            <span
+              className={`mx-2 hover:text-orange-600 ${
+                upVotes === false ? TEXT.orange : ""
+              }`}
+              onClick={() => {
+                upVotes === false ? setUpVotes(undefined) : setUpVotes(false);
+              }}
+            >
+              {icons.downVote}
+            </span>
           </div>
-          <div
-            className={`rounded-full ${BG.bglight} w-fit p-1 cursor-pointer`}
-          >
-            <span className="mx-2 hover:text-orange-600">{icons.comments}</span>
-            <span className="mx-2">Comments</span>
-          </div>
+          <Link>
+            <div
+              className={`rounded-full ${BG.bglight} w-fit p-1 cursor-pointer`}
+            >
+              <span className="mx-2 hover:text-orange-600">
+                {icons.comments}
+              </span>
+              <span className="mx-2">Comments</span>
+            </div>
+          </Link>
           <div
             className={`rounded-full ${BG.bglight} w-fit p-1 cursor-pointer`}
           >
